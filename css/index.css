@@ -8,25 +8,76 @@ body {
   ); /* Light gray background */
   color: #333; /* Default text color */
   font-family: Arial, sans-serif; /* Default font family */
-  margin: 0;
+  margin: 20px;
   padding: 0;
 }
-section {
-  margin: 20px 0;
+.navbar {
+  background-color: #accb33; /* Darker blue for navbar */
   padding: 10px;
 }
+
 h1 {
   font-size: 24px;
   color: #2c502f; /* Darker blue for headings */
-  padding: 40px;
 }
 h2 {
   font-size: 20px;
   color: #caca1a; /* Darker blue for subheadings */
-  margin: 20px;
 }
+
 p {
   font-size: 16px;
   color: #333; /* Default text color */
-  margin-left: 20px;
+}
+ul {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  color: #333;
+}
+.link:hover {
+  color: yellow;
+}
+
+/* iPhone 12 and up (portrait) */
+@media (max-width: 390px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* iPad (portrait) */
+@media (min-width: 768px) and (max-width: 820px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(218, 224, 36);
+  }
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: rgb(218, 224, 36);
+  width: 50%;
+  padding: 50px;
+  margin-left: 50px;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: rgb(218, 224, 36);
+  width: 50%;
+  padding: 50px;
+  margin-left: 50px;
 }
