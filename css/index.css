@@ -1,5 +1,4 @@
 body {
-  background: #2a7b9b;
   background: linear-gradient(
     90deg,
     rgba(42, 123, 155, 1) 0%,
@@ -22,7 +21,7 @@ h1 {
 }
 h2 {
   font-size: 20px;
-  color: #caca1a; /* Darker blue for subheadings */
+  color: #14140b; /* Darker blue for subheadings */
 }
 
 p {
@@ -60,7 +59,7 @@ ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  background-color: rgb(218, 224, 36);
+  background-color: #f5dd43;
   width: 50%;
   padding: 50px;
   margin-left: 50px;
@@ -80,4 +79,46 @@ li {
   width: 50%;
   padding: 50px;
   margin-left: 50px;
+}
+
+/* Base Styles (Mobile First) */
+#Skills ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Skills li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f5dd43;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  #Skills ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #Skills li {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    margin: 10px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  #Skills ul {
+    justify-content: space-between;
+  }
+
+  #Skills li {
+    flex: 1 1 20%;
+  }
 }
