@@ -14,11 +14,9 @@ const skills = ["JavaScript", "HTML", "CSS", "Adobe Photoshop", "GitHub"];
 const skillsSection = document.querySelector("#Skills");
 const skillsList = skillsSection.querySelector("ul");
 
-for (let i = 0; i < skills.length; i++) {
-  const skillName = skills[i];
-
-  // Create a new list item element
+// Create a new list item element
+skills.forEach((skillName) => {
   const skill = document.createElement("li");
   skill.textContent = skillName;
   skillsList.appendChild(skill);
-}
+});
