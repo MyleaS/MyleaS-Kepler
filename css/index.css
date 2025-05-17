@@ -120,3 +120,16 @@ li {
     flex: 1 1 20%;
   }
 }
+
+/* Base Styles for Form */
+form[name="leave_message"] {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between form elements */
+  max-width: 300px; /* Limits the form width */
+  margin: 5 auto; /* Centers the form */
+  padding: 20px;
+  border: 1px solid #292a27;
+  border-radius: 5px;
+  background-color: #d4db4e;
+}
