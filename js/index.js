@@ -88,6 +88,7 @@ fetch(`https://api.github.com/users/${"MyleaS"}/repos`)
     // Query the projectSection to find the <ul> element
     const projectList = projectSection.querySelector("ul");
     // Iterate over the repositories array
+    console.log(projectList);
     for (let i = 0; i < repositories.length; i++) {
       // Create a new list item element
       const project = document.createElement("li");
