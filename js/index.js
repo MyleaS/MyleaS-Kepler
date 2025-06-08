@@ -1,7 +1,9 @@
+// Create and append footer
 const body = document.body;
 const footer = document.createElement("footer");
 body.appendChild(footer);
 
+// Create and append copyright
 const today = new Date();
 const thisYear = today.getFullYear();
 const footerElement = document.querySelector("footer");
@@ -10,9 +12,21 @@ const copyright = document.createElement("p");
 copyright.innerHTML = `&copy; ${thisYear} Mylea Spicer All rights reserved.`;
 footerElement.appendChild(copyright);
 
+// Define skills array
 const skills = ["JavaScript", "HTML", "CSS", "Adobe Photoshop", "GitHub"];
-const skillsSection = document.querySelector("#Skills");
+const skillsSection = document.querySelector("#skills");
 const skillsList = skillsSection.querySelector("ul");
+
+if (skillsSection) {
+  const skillsList = skillsSection.querySelector("ul");
+  if (skillsList) {
+    skills.forEach((skillName) => {
+      const skill = document.createElement("li");
+      skill.textContent = skillName;
+      skillsList.appendChild(skill);
+    });
+  }
+}
 
 // Create a new list item element
 skills.forEach((skillName) => {
@@ -104,7 +118,7 @@ fetch(`https://api.github.com/users/${"MyleaS"}/repos`)
     console.error("There was a problem with the fetch operation:", error);
 
     // Display an error message in the Projects section
-    const projectSection = document.getElementById("Projects");
+    const projectSection = document.getElementById("projects");
     const errorMessage = document.createElement("p");
     errorMessage.textContent =
       "Failed to load projects. Please try again later.";
